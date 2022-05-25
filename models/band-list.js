@@ -2,7 +2,13 @@ const Band = require('./band');
 
 class BandList {
   constructor() {
-    this.bands = [new Band('banda 1'), new Band('banda 2'), new Band('banda 3'), new Band('banda 4')];
+    this.bands = [
+      //
+      new Band('banda 1'),
+      new Band('banda 2'),
+      new Band('banda 3'),
+      new Band('banda 4'),
+    ];
   }
 
   addBand(name) {
@@ -12,7 +18,8 @@ class BandList {
   }
 
   removeBand(id) {
-    this.bands.filter((band) => band.id !== id);
+    console.log(this.bands.length);
+    this.bands = this.bands.filter((band) => band.id !== id);
   }
 
   get getBand() {
